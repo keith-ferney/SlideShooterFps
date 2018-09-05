@@ -154,6 +154,7 @@ _sections_unfolded = [ "Collision" ]
 
 shape = SubResource( 1 )
 disabled = false
+_sections_unfolded = [ "Pause", "Transform", "Visibility" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="1"]
 

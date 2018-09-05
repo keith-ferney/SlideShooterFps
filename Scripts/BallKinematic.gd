@@ -14,15 +14,15 @@ const MAX_SLOPE_ANGLE = 30
 func _physics_process(delta):
 	var dir = Vector3() # Where does the player intend to walk to
 	var cam_xform = get_node("../Camera").get_global_transform()
-
-	if Input.is_action_pressed("ui_up"):
-		dir += -cam_xform.basis[2]
-	if Input.is_action_pressed("ui_down"):
-		dir += cam_xform.basis[2]
-	if Input.is_action_pressed("ui_left"):
-		dir += -cam_xform.basis[0  ]
-	if Input.is_action_pressed("ui_right"):
-		dir += cam_xform.basis[0]
+	#
+	# if Input.is_action_pressed("ui_up"):
+	# 	dir += -cam_xform.basis[2]
+	# if Input.is_action_pressed("ui_down"):
+	# 	dir += cam_xform.basis[2]
+	# if Input.is_action_pressed("ui_left"):
+	# 	dir += -cam_xform.basis[0  ]
+	# if Input.is_action_pressed("ui_right"):
+	# 	dir += cam_xform.basis[0]
 
 	dir.y = 0
 	dir = dir.normalized()
