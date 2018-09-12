@@ -36,7 +36,7 @@ use_filter = false
 font_data = SubResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="CanvasItemMaterial" id=8]
+[sub_resource type="CanvasItemMaterial" id=6]
 
 render_priority = 0
 blend_mode = 0
@@ -92,7 +92,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 6.0
 margin_right = 1028.0
-margin_bottom = 198.0
+margin_bottom = 153.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -117,9 +117,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 202.0
+margin_top = 157.0
 margin_right = 1028.0
-margin_bottom = 394.0
+margin_bottom = 304.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -140,14 +140,14 @@ _sections_unfolded = [ "Size Flags", "custom_fonts", "custom_styles" ]
 
 [node name="Quit" type="MenuButton" parent="." index="3"]
 
-material = SubResource( 8 )
+material = SubResource( 6 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 398.0
+margin_top = 308.0
 margin_right = 1028.0
-margin_bottom = 590.0
+margin_bottom = 455.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -172,9 +172,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 594.0
+margin_top = 459.0
 margin_right = 1028.0
-margin_bottom = 602.0
+margin_bottom = 601.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
