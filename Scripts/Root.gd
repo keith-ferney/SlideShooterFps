@@ -7,6 +7,11 @@ extends Node
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	if gamestate.player_type == "server":
+		$network.start_server()
+	pass
+	if gamestate.player_type == "client":
+		$network.join_server(gamestate.server_ip)
 	pass
 
 #func _process(delta):

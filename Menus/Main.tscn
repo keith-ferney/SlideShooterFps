@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scripts/StartGame.gd" type="Script" id=1]
+[ext_resource path="res://Menus/ConnectMenu.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Settings.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/QuitGame.gd" type="Script" id=3]
-[ext_resource path="res://Menus/ConnectMenu.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -23,20 +22,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 default_font = SubResource( 2 )
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="DynamicFontData" id=4]
-
-hinting = 2
-font_path = "res://Materials/fonts-japanese-gothic.ttf"
-
-[sub_resource type="DynamicFont" id=5]
-
-size = 100
-use_mipmaps = false
-use_filter = false
-font_data = SubResource( 4 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="CanvasItemMaterial" id=6]
+[sub_resource type="CanvasItemMaterial" id=4]
 
 render_priority = 0
 blend_mode = 0
@@ -69,20 +55,38 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1028.0
-margin_bottom = 2.0
+margin_bottom = 136.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 0
-custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Slide Shoot FPS"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="HSeparator" type="HSeparator" parent="Label" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 231.0
+margin_top = 140.0
+margin_right = 799.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Grow Direction", "Rect", "Size Flags" ]
 
 [node name="StartGame" type="MenuButton" parent="." index="1"]
 
@@ -90,26 +94,25 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 6.0
+margin_top = 140.0
 margin_right = 1028.0
-margin_bottom = 153.0
+margin_bottom = 282.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 1
+size_flags_vertical = 1
 toggle_mode = false
 action_mode = 0
 enabled_focus_mode = 0
 shortcut = null
 group = null
-text = "Start Game"
+text = "Connect or Host Server"
 flat = true
 align = 1
 items = [  ]
 script = ExtResource( 1 )
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Settings" type="MenuButton" parent="." index="2"]
 
@@ -117,9 +120,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 157.0
+margin_top = 286.0
 margin_right = 1028.0
-margin_bottom = 304.0
+margin_bottom = 442.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -140,14 +143,14 @@ _sections_unfolded = [ "Size Flags", "custom_fonts", "custom_styles" ]
 
 [node name="Quit" type="MenuButton" parent="." index="3"]
 
-material = SubResource( 6 )
+material = SubResource( 4 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 308.0
+margin_top = 446.0
 margin_right = 1028.0
-margin_bottom = 455.0
+margin_bottom = 602.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -165,31 +168,5 @@ align = 1
 items = [  ]
 script = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="MenuButton" type="MenuButton" parent="." index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 459.0
-margin_right = 1028.0
-margin_bottom = 601.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-action_mode = 0
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Connect or Host Server"
-flat = true
-align = 1
-items = [  ]
-script = ExtResource( 4 )
 
 

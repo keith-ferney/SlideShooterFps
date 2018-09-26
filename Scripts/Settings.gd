@@ -14,5 +14,4 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-func _pressed():
-	get_tree().change_scene("window_management.tscn")
+#func _pressed():

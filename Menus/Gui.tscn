@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Movement.gd" type="Script" id=1]
+[ext_resource path="res://control.gd" type="Script" id=1]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -19,24 +19,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 default_font = SubResource( 2 )
 
-[sub_resource type="DynamicFontData" id=4]
-
-hinting = 2
-font_path = "res://Materials/fonts-japanese-gothic.ttf"
-
-[sub_resource type="DynamicFont" id=5]
-
-size = 30
-use_mipmaps = false
-use_filter = false
-font_data = SubResource( 4 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="Theme" id=6]
-
-default_font = SubResource( 5 )
-
-[node name="Gui" type="ViewportContainer"]
+[node name="Gui" type="ViewportContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -53,24 +36,7 @@ stretch = true
 stretch_shrink = 1
 _sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="ColorRect" type="ColorRect" parent="." index="0"]
-
-anchor_left = 1.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 0.0
-margin_left = -299.0
-margin_bottom = 601.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 3
-color = Color( 0.46875, 0.46875, 0.46875, 0.469608 )
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect" index="0"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="." index="0"]
 
 anchor_left = 1.0
 anchor_top = 0.5
@@ -85,11 +51,10 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-theme = SubResource( 6 )
 alignment = 0
-_sections_unfolded = [ "Material" ]
+_sections_unfolded = [ "Material", "Theme" ]
 
-[node name="PerSecond" type="VSplitContainer" parent="ColorRect/VBoxContainer2" index="0"]
+[node name="PerSecond" type="VSplitContainer" parent="VBoxContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -106,9 +71,9 @@ size_flags_vertical = 3
 split_offset = 0
 collapsed = false
 dragger_visibility = 0
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="EveryFiveSeconds" type="VSplitContainer" parent="ColorRect/VBoxContainer2" index="1"]
+[node name="EveryFiveSeconds" type="VSplitContainer" parent="VBoxContainer2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -126,9 +91,9 @@ size_flags_vertical = 3
 split_offset = 0
 collapsed = false
 dragger_visibility = 0
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="Every20Seconds" type="VSplitContainer" parent="ColorRect/VBoxContainer2" index="2"]
+[node name="Every20Seconds" type="VSplitContainer" parent="VBoxContainer2" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -146,26 +111,9 @@ size_flags_vertical = 3
 split_offset = 0
 collapsed = false
 dragger_visibility = 0
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="ColorRect2" type="ColorRect" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 302.0
-margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 3
-color = Color( 0.742188, 0.742188, 0.742188, 0.475137 )
-_sections_unfolded = [ "Grow Direction", "Size Flags", "Theme" ]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect2" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -182,7 +130,7 @@ size_flags_vertical = 3
 alignment = 0
 _sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="RotateLeft" type="Button" parent="ColorRect2/VBoxContainer" index="0"]
+[node name="RotateLeft" type="Button" parent="VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -207,7 +155,7 @@ align = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
-[node name="RotateRight" type="Button" parent="ColorRect2/VBoxContainer" index="1"]
+[node name="RotateRight" type="Button" parent="VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -231,9 +179,9 @@ text = "Rotate Right"
 flat = false
 align = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
-[node name="MoveBackward" type="Button" parent="ColorRect2/VBoxContainer" index="2"]
+[node name="MoveBackward" type="Button" parent="VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -257,9 +205,9 @@ text = "Move Backwards"
 flat = false
 align = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
-[node name="MoveForward" type="Button" parent="ColorRect2/VBoxContainer" index="3"]
+[node name="MoveForward" type="Button" parent="VBoxContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -283,9 +231,9 @@ text = "Move Forward"
 flat = false
 align = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
-[node name="Fire" type="Button" parent="ColorRect2/VBoxContainer" index="4"]
+[node name="Fire" type="Button" parent="VBoxContainer" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -309,6 +257,6 @@ text = "Fire"
 flat = false
 align = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme" ]
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
 
